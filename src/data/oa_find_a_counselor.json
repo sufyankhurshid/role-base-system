@@ -1,0 +1,37 @@
+{
+  "situations": {
+    "0": "Work",
+    "1": "Relationships",
+    "2": "Parenthood",
+    "3": "School",
+    "4": "Family",
+    "5": "Sexuality",
+    "6": "Divorce/Separation",
+    "7": "Stress",
+    "8": "Bullying",
+    "9": "Domestic violence/abuse",
+    "10": "Life crisis",
+    "11": "Pain",
+    "12": "Other",
+    "13": "None"
+  },
+  "symptoms": {
+    "0": "Panic attacks",
+    "1": "Changes in eating patterns",
+    "2": "Anger",
+    "3": "Low mood",
+    "4": "Generalized fear",
+    "5": "Fear of a specific situation",
+    "6": "Sleeping problems",
+    "7": "Tiredness",
+    "8": "Inability to focus",
+    "9": "Low self-esteem",
+    "10": "Trauma",
+    "11": "Addiction",
+    "12": "Suicidal thoughts",
+    "13": "Loss",
+    "14": "Burnout",
+    "15": "Other",
+    "16": "None"
+  }
+}
