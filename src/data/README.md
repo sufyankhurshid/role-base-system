@@ -5,12 +5,14 @@
 We do not have every specific symptom or situation in our onboarding journey, because it would
 be overvhelmingly many, but also because some of them are very specific diagnoses by a therapist
 and we don't want people to self-diagnose.  
-Therefore, we have three file types:  
+Therefore, we have three file types:
+
 1. `de/en/fr.json` with the translated situations, symptoms and methods and numbered keys
 2. `oa_find_a_counselor.json` with the data we get from the onboarding journey
-3. `oa_to_db_mapping.json` which maps our oa_ filters to the symptoms and situations we have indexed and that we can use as filters
+3. `oa_to_db_mapping.json` which maps our oa\_ filters to the symptoms and situations we have indexed and that we can use as filters
 
 Example:
+
 ```json
 // oa_to_db_mapping.json
 
@@ -31,4 +33,4 @@ Example:
         ...,
     }
 }
-````
+```

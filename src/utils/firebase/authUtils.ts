@@ -1,11 +1,11 @@
-import firebase from 'firebase/app';
-import { db } from 'contexts/FirebaseContext';
+import firebase from "firebase/app";
+import { db } from "contexts/FirebaseContext";
 
 export function validateAdmin(uid: string) {
-  const createCode = firebase.functions().httpsCallable('validateAdmin');
+  const createCode = firebase.functions().httpsCallable("validateAdmin");
   return createCode({ uid });
 }
 
 export function getGetTherapist(userId: string) {
-  return db.collection('therapists').where('uid', '==', userId);
+  return db.collection("therapists").where("uid", "==", userId);
 }

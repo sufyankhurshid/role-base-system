@@ -73,40 +73,40 @@ function AuthProvider({ children }: { children: ReactNode }) {
   const [profile, setProfile] = useState<firebase.firestore.DocumentData | undefined>();
   const [state, dispatch] = useReducer(reducer, initialState);
 
-  useEffect(
-    () =>
-      firebase.auth().onAuthStateChanged(async (user) => {
-        try {
-          if (user?.uid) {
-            const { data } = await validateAdmin(user?.uid);
-            const therapist = await getGetTherapist(user.uid)
-              .get()
-              .then((snap) => snap?.docs?.[0]?.data());
-
-            if (data?.admin || data?.chat) {
-              setProfile(user);
-
-              dispatch({
-                type: Types.Initial,
-                payload: { isAuthenticated: true, user, roles: data, therapistId: therapist?.id }
-              });
-            } else {
-              throw Error('No access');
-            }
-          } else {
-            throw Error('unable to authorize.');
-          }
-        } catch (e: any) {
-          console.log(e);
-          setProfile(undefined);
-          dispatch({
-            type: Types.Initial,
-            payload: { isAuthenticated: false, user: null }
-          });
-        }
-      }), // eslint-disable-next-line
-    [dispatch]
-  );
+  // useEffect(
+  //   () =>
+  //     firebase.auth().onAuthStateChanged(async (user) => {
+  //       try {
+  //         if (user?.uid) {
+  //           const { data } = await validateAdmin(user?.uid);
+  //           const therapist = await getGetTherapist(user.uid)
+  //             .get()
+  //             .then((snap) => snap?.docs?.[0]?.data());
+  //
+  //           if (data?.admin || data?.chat) {
+  //             setProfile(user);
+  //
+  //             dispatch({
+  //               type: Types.Initial,
+  //               payload: { isAuthenticated: true, user, roles: data, therapistId: therapist?.id }
+  //             });
+  //           } else {
+  //             throw Error('No access');
+  //           }
+  //         } else {
+  //           throw Error('unable to authorize.');
+  //         }
+  //       } catch (e: any) {
+  //         console.log(e);
+  //         setProfile(undefined);
+  //         dispatch({
+  //           type: Types.Initial,
+  //           payload: { isAuthenticated: false, user: null }
+  //         });
+  //       }
+  //     }), // eslint-disable-next-line
+  //   [dispatch]
+  // );
 
   const login = (email: string, password: string) =>
     firebase.auth().signInWithEmailAndPassword(email, password);

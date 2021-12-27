@@ -4,7 +4,7 @@ import { initializeApp } from 'firebase/app';
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
-const appConfig = {
+export const appConfig = {
   apiKey: 'AIzaSyBbm9SwK8Il7cMGlR_EtbE6ZCg0Ecf03Y0',
   authDomain: 'role-base-system.firebaseapp.com',
   projectId: 'role-base-system',
@@ -12,6 +12,3 @@ const appConfig = {
   messagingSenderId: '115919332128',
   appId: '1:115919332128:web:a5ff219289c2491f7a6d45'
 };
-
-// Initialize Firebase
-const app = initializeApp(appConfig);
