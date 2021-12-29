@@ -80,6 +80,7 @@
     "draftjs-to-html": "^0.9.1",
     "emoji-mart": "^3.0.0",
     "firebase": "^8.10.0",
+    "firebase-admin": "^10.0.1",
     "formik": "^2.2.9",
     "framer-motion": "^4.1.17",
     "geojson": "^0.5.0",
